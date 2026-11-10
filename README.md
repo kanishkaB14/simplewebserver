@@ -110,11 +110,8 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 
 ## OUTPUT:
-<img width="1672" height="941" alt="Laptop Configuration Webpage Screenshot (1)" src="https://github.com/user-attachments/assets/76727317-9f5c-41a2-9dae-9f862742c122" />
-
-
-
-<img width="1015" height="522" alt="image" src="https://github.com/user-attachments/assets/5973bfab-61a4-40bf-a674-4b36fd7503a3" />
+![alt text](<Screenshot 2026-11-10 123908.png>)
+![alt text](<Screenshot 2026-11-10 123957.png>)
 
 ## RESULT:
 
