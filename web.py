@@ -1,84 +1,56 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <html>
-<head>
-<p><b>KANISHKA B (26010203)</b></p>
-</head>
-<body>
-<table border="2" cellpadding="10">
-    <caption>My Laptop Configuration</caption>
+    <head>
+        <title>device specifications</title>
+    </head>
+        <body>
+            <h2 align="center">DEVICE SPECIFICATIONS-26010203</h2>
+            <table border="1" cellspacing="2" cellpadding="20">
+                <tr>
+                    <th>S.No</th>
+                    <th>Device specification</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Storage</td>
+                    <td>954 GB</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Graphics card</td>
+                    <td>128 GB</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Installed RAM</td>
+                    <td>16 GB</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Processor</td>
+                    <td>Intel(R)Core(TM) Ultra 5 125H</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Product ID</td>
+                    <td>00342-42784-66091-AAOEM</td>
+                </tr>
 
-    <tr>
-        <th>s.no</th>
-        <th>Device Type</th>
-        <th>Device Info</th>
-    </tr>
-
-    <tr>
-        <td>1.</td>
-        <td>Device Name</td>
-        <td>TL15-53M-G2</td>
-    </tr>
-
-    <tr>
-        <td>2.</td>
-        <td>Processor</td>
-        <td>Intel(R) Core(TM) 5 210H (2.20 GHz)</td>
-    </tr>
-
-    <tr>
-        <td>3.</td>
-        <td>Installed RAM</td>
-        <td>16.0 GB (15.7 GB usable)</td>
-    </tr>
-
-    <tr>
-        <td>4.</td>
-        <td>Graphics Card</td>
-        <td>Intel(R) Graphics (128 MB)</td>
-    </tr>
-
-    <tr>
-        <td>5.</td>
-        <td>Storage</td>
-        <td>120 GB of 477 GB used</td>
-    </tr>
-
-    <tr>
-        <td>6.</td>
-        <td>Device ID</td>
-        <td>723C743C-67E7-4A5E-BFFF-7B8E0F0E07A8</td>
-    </tr>
-
-    <tr>
-        <td>7.</td>
-        <td>Product ID</td>
-        <td>00342-42954-11703-AAOEM</td>
-    </tr>
-
-    <tr>
-        <td>8.</td>
-        <td>System Type</td>
-        <td>64-bit operating system, x64-based processor</td>
-    </tr>
-
-    <tr>
-        <td>9.</td>
-        <td>Pen and Touch</td>
-        <td>No pen or touch input is available for this display</td>
-    </tr>
-</table>
-</body>
+            </table>
+        </body>
+    
 </html>
 """
 class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("Client request received")
+        print("request received")
         self.send_response(200)
-        self.send_header('content-type','text/html; charset')
+        self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
 server_address = ('',8000)
 httpd = HTTPServer(server_address,myhandler)
-print("my own webserver is running successfully...")
+print("my webserver is running...")
 httpd.serve_forever()
